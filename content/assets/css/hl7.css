@@ -15,6 +15,14 @@
   --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
 }
 
+body {
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
+}
+
 #hl7-nav {
   line-height: 50px;
   float: left;

@@ -90,11 +90,17 @@ var(--publish-box-border); */
 
 html {
   background-color: #ffffff;
+  font-size: 16px;
 }
 body {
   background-color: #ffffff;
   position: relative;
   padding-top: 0;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .segment {
   position: relative;
@@ -178,6 +184,47 @@ body {
 }
 #logo img {
   max-width: 100%;
+}
+
+/* IG header: logo + title on one line */
+.ig-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+.ig-logo {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  display: block;
+}
+.ig-title-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ig-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--btn-text-color, #2d1152);
+  line-height: 1.05;
+}
+.ig-subtitle {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 2px;
+}
+
+@media (max-width: 720px) {
+  .ig-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .ig-title {
+    font-size: 1rem;
+  }
 }
 
 #fcp-nav {
@@ -618,8 +665,46 @@ div.markdown-toc p.link
 
 /* Fix to avoid truncating letter descenders in headings */
 h1, h2, h3, h4, h5, h6, .title {
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 1.5em 0 0.5em 0;
   overflow: visible;
-  margin: 1em 0 0.4em 0;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d1152;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.3em;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3c207c;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.2em;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4e2a8e;
+}
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #5c3ca0;
+}
+h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6a4cb2;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7a5cc4;
 }
 
 /* Common content for section numbering */
