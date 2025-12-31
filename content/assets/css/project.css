@@ -97,8 +97,8 @@ body {
   position: relative;
   padding-top: 0;
   font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.0625rem; /* 17px for slightly larger readable body text */
-  line-height: 1.6;
+  font-size: 1.125rem; /* ~18px for improved readability */
+  line-height: 1.7;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -147,6 +147,9 @@ body {
 
 /* compact inner wrapper */
 #segment-footer .inner-wrapper p { margin: 0.45rem 0; font-size: 0.95rem; }
+
+/* Ensure paragraphs in content have comfortable spacing */
+.inner-wrapper p, .inner-wrapper li { font-size: 1.125rem; line-height: 1.75; }
 
 /* bottom strip (post-footer) remains hidden by default; show only when necessary */
 #segment-post-footer { display: none; }
