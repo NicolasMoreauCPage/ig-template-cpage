@@ -136,18 +136,23 @@ body {
   margin: 0.6rem 0;
   color: var(--footer-text-color);
 }
-#segment-footer [style*="background-color:var(--footer-nav-bg-color)"] {
-  background-color: rgba(0,0,0,0.05);
+/* nav strip at top of footer — subtle and compact */
+#segment-footer .footer-nav-strip {
+  background-color: rgba(0,0,0,0.03);
+  padding: 6px 0;
+  border-top: 1px solid rgba(0,0,0,0.04);
 }
-#segment-footer table {
-  width: 100%;
-}
-#segment-footer td {
-  padding: 6px 8px;
-}
-#segment-post-footer {
-  display: none; /* keep post-footer hidden unless needed */
-}
+#segment-footer .footer-nav-strip table { width: 100%; }
+#segment-footer .footer-nav-strip td { padding: 4px 6px; font-size: 0.95rem; }
+
+/* compact inner wrapper */
+#segment-footer .inner-wrapper p { margin: 0.45rem 0; font-size: 0.95rem; }
+
+/* bottom strip (post-footer) remains hidden by default; show only when necessary */
+#segment-post-footer { display: none; }
+
+/* Ensure links are spaced and readable */
+#segment-footer .inner-wrapper a { margin-right: 0.6rem; }
 .navbar-inverse {
   background-color: var(--navbar-bg-color);
 }
