@@ -269,6 +269,26 @@ body {
   padding-right: 15px;
 }
 
+/* Larger displays: expand container but keep readable measure */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+  /* Right-hand TOC: limit width and make sticky */
+  ul.markdown-toc, div.markdown-toc {
+    width: 320px !important;
+    position: sticky;
+    top: 110px;
+    background-color: #fff9e6; /* softer than full yellow */
+    border: 1px solid #f0dca8;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .inner-wrapper {
+    max-width: calc(100% - 360px);
+  }
+}
+
 /* Make the publish box less aggressive and clearer */
 #publish-box {
   background-color: #fff7e6; /* softer than bright yellow */
