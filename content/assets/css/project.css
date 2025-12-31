@@ -324,6 +324,14 @@ body {
   }
 
   #publish-box { max-width: 48ch; }
+
+  /* Tweak logo and header spacing for very large displays */
+  .ig-logo { height: 44px; max-width: 200px; }
+  .ig-header-row { padding: 0.25rem 0; }
+  .ig-subtitle { font-size: 0.88rem; }
+
+  /* Slightly soften publish-box tone */
+  #publish-box { background-color: #fffaf0; border-color: #efe0b0; }
 }
 
 /* Make the publish box less aggressive and clearer */
