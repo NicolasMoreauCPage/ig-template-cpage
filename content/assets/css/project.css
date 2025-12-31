@@ -228,6 +228,29 @@ body {
   }
 }
 
+/* Layout: limit measure for better readability */
+.container {
+  max-width: 1000px; /* readable measure for long content */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Make the publish box less aggressive and clearer */
+#publish-box {
+  background-color: #fff7e6; /* softer than bright yellow */
+  border: 1px solid #f0dca8;
+  color: #333333;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+}
+
+/* Ensure small gap between heading and following paragraph */
+h1 + p, h2 + p, h3 + p {
+  margin-top: 0.45rem;
+}
+
 #fcp-nav {
   line-height: 50px;
   float: right;
