@@ -124,6 +124,30 @@ body {
   background-color: var(--footer-container-bg-color);
   color: var(--footer-text-color);
 }
+/* Footer visual improvements */
+#segment-footer {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+#segment-footer a {
+  color: var(--footer-hyperlink-text-color);
+}
+#segment-footer .inner-wrapper p {
+  margin: 0.6rem 0;
+  color: var(--footer-text-color);
+}
+#segment-footer [style*="background-color:var(--footer-nav-bg-color)"] {
+  background-color: rgba(0,0,0,0.05);
+}
+#segment-footer table {
+  width: 100%;
+}
+#segment-footer td {
+  padding: 6px 8px;
+}
+#segment-post-footer {
+  display: none; /* keep post-footer hidden unless needed */
+}
 .navbar-inverse {
   background-color: var(--navbar-bg-color);
 }
