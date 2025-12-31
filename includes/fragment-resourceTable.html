@@ -85,7 +85,19 @@
         <i>Realm:</i> {{trimmedJurisdictions}}
       </td>
 {% endif %}
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">{{site.data.resources[resource_].name}}</span></td>
+      <td>
+        <i>Computable Name</i>: <span style="font-family: monospace;">
+          {% if site.data.resources[resource_].name and site.data.resources[resource_].name != "" %}
+            {{ site.data.resources[resource_].name }}
+          {% elsif site.data.resources[resource_].id and site.data.resources[resource_].id != "" %}
+            {{ site.data.resources[resource_].id }}
+          {% elsif site.data.fhir.packageId %}
+            {{ site.data.fhir.packageId }}
+          {% else %}
+            
+          {% endif %}
+        </span>
+      </td>
     </tr>
 {% if site.data.resources[resource_].identifiers %}
     <tr>
