@@ -97,7 +97,8 @@ body {
   position: relative;
   padding-top: 0;
   font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.0625rem; /* 17px for slightly larger readable body text */
+  line-height: 1.6;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -673,36 +674,39 @@ h1, h2, h3, h4, h5, h6, .title {
   overflow: visible;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* reduced for better balance */
   font-weight: 700;
   color: #2d1152;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.3em;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 0.25em;
+  margin-top: 1.25em;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #3c207c;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.2em;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 0.15em;
+  margin-top: 1.15em;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #4e2a8e;
+  margin-top: 1.05em;
 }
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #5c3ca0;
 }
 h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #6a4cb2;
 }
 h6 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #7a5cc4;
 }
