@@ -149,7 +149,7 @@ body {
 #segment-footer .inner-wrapper p { margin: 0.45rem 0; font-size: 0.95rem; }
 
 /* Ensure paragraphs in content have comfortable spacing */
-.inner-wrapper p, .inner-wrapper li { font-size: 1.125rem; line-height: 1.75; }
+.inner-wrapper p, .inner-wrapper li { font-size: 0.92rem; line-height: 1.6; }
 
 /* bottom strip (post-footer) remains hidden by default; show only when necessary */
 #segment-post-footer { display: none; }

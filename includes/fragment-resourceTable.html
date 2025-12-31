@@ -87,7 +87,9 @@
 {% endif %}
       <td>
         <i>Computable Name</i>: <span style="font-family: monospace;">
-          {% if site.data.resources[resource_].name and site.data.resources[resource_].name != "" %}
+          {% if site.data.fhir and site.data.fhir.ig and site.data.fhir.ig.name and site.data.fhir.ig.name != "" %}
+            {{ site.data.fhir.ig.name }}
+          {% elsif site.data.resources[resource_].name and site.data.resources[resource_].name != "" %}
             {{ site.data.resources[resource_].name }}
           {% elsif site.data.resources[resource_].id and site.data.resources[resource_].id != "" %}
             {{ site.data.resources[resource_].id }}
