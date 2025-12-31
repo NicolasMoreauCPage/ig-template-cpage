@@ -668,45 +668,52 @@ div.markdown-toc p.link
 h1, h2, h3, h4, h5, h6, .title {
   font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -0.01em;
-  margin: 1.5em 0 0.5em 0;
+  margin: 1em 0 0.45em 0;
   overflow: visible;
 }
+
+/* Ensure pseudo-numbering is unobtrusive */
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+  font-size: 0.95em;
+  color: #9a9a9a;
+  margin-right: 0.4rem;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 h1 {
-  font-size: 2rem; /* reduced for better balance */
+  font-size: 1.75rem; /* slightly smaller for balance */
   font-weight: 700;
   color: #2d1152;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #ececec;
   padding-bottom: 0.25em;
-  margin-top: 1.25em;
 }
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #3c207c;
-  border-bottom: 1px solid #ededed;
-  padding-bottom: 0.15em;
-  margin-top: 1.15em;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 0.12em;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #4e2a8e;
-  margin-top: 1.05em;
 }
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #5c3ca0;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: #6a4cb2;
 }
 h6 {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: #7a5cc4;
 }
