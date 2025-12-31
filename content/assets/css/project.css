@@ -304,21 +304,26 @@ body {
 /* On very large displays, slightly reduce font scale and measure for better harmony */
 @media (min-width: 1600px) {
   body {
-    font-size: 1.05rem; /* slightly smaller than default 1.125rem */
-    line-height: 1.65;
+    font-size: 1.0rem; /* reduce to ~16px on very large screens */
+    line-height: 1.6;
   }
 
   .ig-title {
-    font-size: 1.16rem; /* reduce heading size a touch */
+    font-size: 1.0rem; /* smaller, tighter title */
   }
 
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.125rem; }
+
   .container {
-    max-width: 1100px; /* reduce measure to avoid overly long lines on very wide screens */
+    max-width: 1000px; /* tighter measure for readability on very wide screens */
   }
 
   .inner-wrapper {
-    gap: 36px; /* slightly reduce gap */
+    gap: 32px;
   }
+
+  #publish-box { max-width: 48ch; }
 }
 
 /* Make the publish box less aggressive and clearer */
