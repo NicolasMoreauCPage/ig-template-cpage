@@ -1,3 +1,14 @@
 {% assign resource_ = igId | default: site.data.fhir.packageId %}
+{%- comment -%} Try resolving these keys in order:
+  1) provided `igId`
+  2) `site.data.fhir.packageId`
+  3) `ImplementationGuide/<id>` when `site.data.resources` uses full resource keys
+{%- endcomment -%}
+{% if site.data.resources[resource_] == nil %}
+	{% assign candidate = 'ImplementationGuide/' | append: resource_ %}
+	{% if site.data.resources[candidate] %}
+		{% assign resource_ = candidate %}
+	{% endif %}
+{% endif %}
 {% assign table_prefix = 'IG' %}
 {% include fragment-resourceTable.html %}
