@@ -765,6 +765,15 @@ div.markdown-toc
   border: var(--toc-box-border);
 }
 
+/* Harmonize publish-box with markdown TOC styling for a cohesive look */
+div.markdown-toc, #publish-box {
+  background-color: var(--toc-box-bg-color);
+  border: var(--toc-box-border);
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
 div.markdown-toc p
 {
   font-size: 10px;
