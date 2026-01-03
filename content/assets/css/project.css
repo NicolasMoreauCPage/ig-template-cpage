@@ -323,8 +323,6 @@ body {
     gap: 32px;
   }
 
-  #publish-box { max-width: 48ch; }
-
   /* Tweak logo and header spacing for very large displays */
   .ig-logo { height: 44px; max-width: 200px; }
   .ig-header-row { padding: 0.25rem 0; }
@@ -341,7 +339,9 @@ body {
   color: #333333;
   padding: 0.6rem 0.8rem;
   border-radius: 6px;
-  max-width: 60ch;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
 }
 
 /* Ensure small gap between heading and following paragraph */
@@ -401,13 +401,6 @@ h1 + p, h2 + p, h3 + p {
 }
 #notes a {
   color: #555555;
-}
-#publish-box {
-  background-color: var(--publish-box-bg-color);
-  border: var(--publish-box-border);
-  padding: 8px 10px;
-  max-width: 60ch;
-  border-radius: 6px;
 }
 
 .dragon {
