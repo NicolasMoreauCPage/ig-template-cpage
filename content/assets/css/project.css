@@ -752,7 +752,7 @@ ul.markdown-toc
 {
   margin: 4px;
   padding: 4px;
-  float: right;
+  /* float: right;  supprimé pour que le menu ne soit plus flottant */
   z-index: 10;
   width: 30%;
   background-color:  var(--toc-box-bg-color);
