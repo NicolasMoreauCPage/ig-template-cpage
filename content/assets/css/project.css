@@ -112,7 +112,7 @@ body {
 #segment-header > .container,
 #segment-content > .container,
 #segment-footer > .container {
-  max-width: 1000px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -127,7 +127,7 @@ body {
   }
 }
 .site-container { /* conteneur parent commun pour garantir alignement */
-  max-width: 1000px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -136,7 +136,7 @@ body {
 
 @media (min-width: 1400px) {
   .site-container { max-width: 1280px; }
-}
+    max-width: 1280px; /* unified measure for all screens */
 
 /* Assurer que la barre de navigation (menu) utilise la même largeur */
 #main-navbar, .navbar-inverse, #main-navbar > .container {
