@@ -120,9 +120,9 @@ body {
 }
 
 @media (min-width: 1400px) {
-  #segment-header > .container,
-  #segment-content > .container,
-  #segment-footer > .container {
+  .container {
+    max-width: 1280px; /* unified measure for all screens, même >1600px */
+  }
     max-width: 1280px;
   }
 }
