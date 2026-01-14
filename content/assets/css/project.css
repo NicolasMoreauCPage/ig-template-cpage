@@ -272,6 +272,9 @@ body {
   gap: 1rem;
   padding: 0.5rem 0;
 }
+.ig-header-row, .ig-header-row * {
+  max-width: 1280px;
+}
 .ig-logo {
   height: 48px;
   width: auto;
@@ -309,7 +312,7 @@ body {
 
 /* Layout: limit measure for better readability */
 .container {
-  max-width: 1000px; /* readable measure for long content */
+  max-width: 1280px; /* unified measure */
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -328,6 +331,13 @@ body {
     grid-template-columns: 1fr 280px;
     gap: 40px;
     align-items: start;
+  }
+
+  /* Ensure inner-wrapper doesn't exceed the global container width */
+  .inner-wrapper, .inner-wrapper > .content-column, .inner-wrapper > .content-column > .col-12 {
+    max-width: 1280px;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   /* Right-hand TOC: reduced width, softened visual weight, sticky */
@@ -686,6 +696,13 @@ a:focus {
 .breadcrumb {
   margin-bottom: 0;
   background-color: var(--breadcrumb-bg-color);;
+}
+.breadcrumb {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .breadcrumb a {
   color: var(--breadcrumb-text-color);
