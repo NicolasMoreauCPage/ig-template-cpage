@@ -103,6 +103,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Forcer la largeur des colonnes Bootstrap à 1280px et centrage */
+.col-12, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .segment {
   position: relative;
 }
