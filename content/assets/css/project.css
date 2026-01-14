@@ -126,6 +126,32 @@ body {
     max-width: 1280px;
   }
 }
+.site-container { /* conteneur parent commun pour garantir alignement */
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 1400px) {
+  .site-container { max-width: 1280px; }
+}
+
+/* Assurer que la barre de navigation (menu) utilise la même largeur */
+#main-navbar, .navbar-inverse, #main-navbar > .container {
+  width: 100%;
+}
+
+/* Forcer le menu principal à se placer dans .site-container si présent */
+.navbar-inverse > .container { max-width: none; }
+
+/* S'assurer que les sections utilisent le conteneur commun */
+#segment-header > .container > .site-container,
+#segment-content > .container > .site-container,
+#segment-footer > .container > .site-container {
+  width: 100%;
+}
 .segment > .container {
   background-color: #ffffff;
   position: relative;
