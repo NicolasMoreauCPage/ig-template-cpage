@@ -45,32 +45,32 @@ var(--publish-box-border); */
 
 :root {
 
-  --ig-status-text-color: maroon; /* 1. IG Title and status text color */
-  --navbar-bg-color: #7b1fad; /* 2. Header container color */
-  --footer-bg-color: #707070; /* 3. Footer background color*/
-  --footer-container-bg-color: #7b1fad; /* 4. Footer container color */
-  --stripe-bg-color: #999999; /* 5. Header strip color */
+  --ig-status-text-color: #2b2b2b; /* 1. IG Title and status text color */
+  --navbar-bg-color: #0f5fa8; /* 2. Header container color (modern blue) */
+  --footer-bg-color: #2f3b45; /* 3. Footer background color*/
+  --footer-container-bg-color: #0f5fa8; /* 4. Footer container color */
+  --stripe-bg-color: #dcdcdc; /* 5. Header strip color */
 
-  --btn-hover-color: #9b2fdd;  /* 6. Menu button hover color */
-  --btn-active-color: #da0c23; /* 7. Menu button active color */
-  --btn-text-color: #e6e6e6; /* 8. Menu button text color */
-  --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
-  --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
-  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
-  --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
-  --link-color: #428bca; /* 13. Hyperlink text color */
-  --link-hover-color: #2a6496; /* 14. Hyperlink text hover color */
+  --btn-hover-color: #0b4875;  /* 6. Menu button hover color */
+  --btn-active-color: #0a75d1; /* 7. Menu button active color */
+  --btn-text-color: #ffffff; /* 8. Menu button text color */
+  --btn-gradient-start-color: #3b82d6; /* 9. Menu item gradient start color */
+  --btn-gradient-end-color: #2563eb; /* 10. Menu item gradient end  color */
+  --btn-gradient-start-color-alpha: rgba(59,130,246,0.95); /* 11. Menu item gradient start color (with alpha) */
+  --btn-gradient-end-color-alpha: rgba(37,99,235,0.95); /* 12. Menu item gradient end color (with alpha) */
+  --link-color: #0a66c2; /* 13. Hyperlink text color */
+  --link-hover-color: #084b8a; /* 14. Hyperlink text hover color */
 
-  --publish-box-bg-color: yellow; /* 15. Publish box background color */
-  --publish-box-border: 1px solid #0A0008; /* 16.  Publish box border definition */
+  --publish-box-bg-color: #fff9e6; /* 15. Publish box background color */
+  --publish-box-border: 1px solid #e7d7a6; /* 16.  Publish box border definition */
 
-  --toc-box-bg-color: #ffeb7e; /* 17.  TOC box background color */
-  --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
+  --toc-box-bg-color: #ffffff; /* 17.  TOC box background color */
+  --toc-box-border: 1px solid rgba(30,44,65,0.06); /* 18. TOC box border definition */
 
   --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
   --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
 
-  --ig-header-color: #f5f5f5; /* 21. Header color (sides) */
+  --ig-header-color: #ffffff; /* 21. Header color (sides) */
   --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
   --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
 
@@ -78,8 +78,8 @@ var(--publish-box-border); */
   --footer-hyperlink-text-color: #81BEF7; /* 25. Footer hyperlinks font color */
   --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
 
-  --breadcrumb-bg-color: #f5f5f5; /* 27. Breadcrumb font color */
-  --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
+  --breadcrumb-bg-color: #f7f9fb; /* 27. Breadcrumb bg color */
+  --breadcrumb-text-color: #555555; /* 28. Breadcrumb font color */
 
   --dragon-background-color: #fffbf7; /* 29. Dragon background color */
   --dragon-text-color: #101020; /* 30. Dragon font color */
@@ -89,17 +89,17 @@ var(--publish-box-border); */
 
 
 html {
-  background-color: #ffffff;
+  background-color: #fafbfc;
   font-size: 16px;
 }
 body {
-  background-color: #ffffff;
+  background-color: #fafbfc;
   position: relative;
   padding-top: 0;
-  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.125rem; /* ~18px for improved readability */
-  line-height: 1.7;
-  color: #222;
+  font-family: 'Inter', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem; /* ~17px */
+  line-height: 1.6;
+  color: #22272a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -329,15 +329,15 @@ body {
   justify-content: center;
 }
 .ig-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #0b2545; /* stronger, dark navy for contrast */
   line-height: 1.02;
   letter-spacing: -0.01em;
 }
 .ig-subtitle {
-  font-size: 0.9rem;
-  color: #666666;
+  font-size: 0.95rem;
+  color: #55606a;
   margin-top: 2px;
 }
 
@@ -357,8 +357,8 @@ body {
   max-width: 1280px; /* unified measure */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Larger displays: expand container but keep readable measure */
@@ -387,8 +387,8 @@ body {
     width: 280px !important;
     position: sticky;
     top: 110px;
-    background: rgba(250,250,250,0.6);
-    border: 1px solid rgba(200,205,210,0.5);
+    background: var(--toc-box-bg-color);
+    border: var(--toc-box-border);
     padding: 12px;
     border-radius: 8px;
     box-shadow: none;
