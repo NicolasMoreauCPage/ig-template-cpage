@@ -294,6 +294,35 @@ body {
   max-width: 220px;
   display: block;
 }
+
+/* New header layout: top row with logo left, centered main title, spacer right */
+.ig-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.ig-main-title {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0b2545;
+}
+.ig-logo-spacer {
+  width: 220px; /* reserve space equivalent to logo width to keep title centered */
+}
+
+/* Second row: IG title centered */
+.ig-header-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+}
+.ig-ig-title {
+  font-size: 0.95rem;
+  color: #3b3b3b;
+}
 .ig-title-wrap {
   display: flex;
   flex-direction: column;
