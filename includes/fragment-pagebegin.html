@@ -45,7 +45,7 @@
     h3,h4,h5,h6{--heading-prefix:"{{site.data.info.headingOffset}}{{site.data.pages[page.path].label}}"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div id="project-nav">
-        <a no-external="true" id="hl7-logo" href="http://www.cpage.fr/"><img src="assets/images/logo-cpage.svg" alt="CPage Logo" height="50"></a>
+        <a no-external="true" id="hl7-logo" href="http://www.cpage.fr/"><img src="assets/images/logo-cpage.svg" alt="Cpage Logo" height="50"></a>
       </div>
       <div class="container">  <!-- container -->
 {% if site.data.info.fcpspec == 'true' %}
@@ -62,6 +62,11 @@
 {% assign status = site.data.fhir.ig.status %}
 {% endif %}
         <div id="ig-status">
+          <div class="ig-status-logo">
+            <a href="{{site.data.fhir.path}}index.html" aria-label="Accueil CPage">
+              <img src="assets/images/logo-cpage.svg" alt="CPage logo" class="ig-status-logo-img"/>
+            </a>
+          </div>
           <div class="ig-status-text">
             <span class="ig-status-title">{{site.data.fhir.ig.title | escape_once}}</span>
             <br/>
