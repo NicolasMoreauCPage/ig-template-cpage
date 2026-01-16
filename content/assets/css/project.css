@@ -45,32 +45,32 @@ var(--publish-box-border); */
 
 :root {
 
-  --ig-status-text-color: maroon; /* 1. IG Title and status text color */
-  --navbar-bg-color: #7b1fad; /* 2. Header container color */
-  --footer-bg-color: #707070; /* 3. Footer background color*/
-  --footer-container-bg-color: #7b1fad; /* 4. Footer container color */
-  --stripe-bg-color: #999999; /* 5. Header strip color */
+  --ig-status-text-color: #2b2b2b; /* 1. IG Title and status text color */
+  --navbar-bg-color: #0f5fa8; /* 2. Header container color (modern blue) */
+  --footer-bg-color: #2f3b45; /* 3. Footer background color*/
+  --footer-container-bg-color: #0f5fa8; /* 4. Footer container color */
+  --stripe-bg-color: #dcdcdc; /* 5. Header strip color */
 
-  --btn-hover-color: #9b2fdd;  /* 6. Menu button hover color */
-  --btn-active-color: #da0c23; /* 7. Menu button active color */
-  --btn-text-color: #e6e6e6; /* 8. Menu button text color */
-  --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
-  --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
-  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
-  --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
-  --link-color: #428bca; /* 13. Hyperlink text color */
-  --link-hover-color: #2a6496; /* 14. Hyperlink text hover color */
+  --btn-hover-color: #0b4875;  /* 6. Menu button hover color */
+  --btn-active-color: #0a75d1; /* 7. Menu button active color */
+  --btn-text-color: #ffffff; /* 8. Menu button text color */
+  --btn-gradient-start-color: #3b82d6; /* 9. Menu item gradient start color */
+  --btn-gradient-end-color: #2563eb; /* 10. Menu item gradient end  color */
+  --btn-gradient-start-color-alpha: rgba(59,130,246,0.95); /* 11. Menu item gradient start color (with alpha) */
+  --btn-gradient-end-color-alpha: rgba(37,99,235,0.95); /* 12. Menu item gradient end color (with alpha) */
+  --link-color: #0a66c2; /* 13. Hyperlink text color */
+  --link-hover-color: #084b8a; /* 14. Hyperlink text hover color */
 
-  --publish-box-bg-color: yellow; /* 15. Publish box background color */
-  --publish-box-border: 1px solid #0A0008; /* 16.  Publish box border definition */
+  --publish-box-bg-color: #fff9e6; /* 15. Publish box background color */
+  --publish-box-border: 1px solid #e7d7a6; /* 16.  Publish box border definition */
 
-  --toc-box-bg-color: #ffeb7e; /* 17.  TOC box background color */
-  --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
+  --toc-box-bg-color: #ffffff; /* 17.  TOC box background color */
+  --toc-box-border: 1px solid rgba(30,44,65,0.06); /* 18. TOC box border definition */
 
   --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
   --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
 
-  --ig-header-color: #f5f5f5; /* 21. Header color (sides) */
+  --ig-header-color: #ffffff; /* 21. Header color (sides) */
   --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
   --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
 
@@ -78,8 +78,8 @@ var(--publish-box-border); */
   --footer-hyperlink-text-color: #81BEF7; /* 25. Footer hyperlinks font color */
   --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
 
-  --breadcrumb-bg-color: #f5f5f5; /* 27. Breadcrumb font color */
-  --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
+  --breadcrumb-bg-color: #f7f9fb; /* 27. Breadcrumb bg color */
+  --breadcrumb-text-color: #555555; /* 28. Breadcrumb font color */
 
   --dragon-background-color: #fffbf7; /* 29. Dragon background color */
   --dragon-text-color: #101020; /* 30. Dragon font color */
@@ -89,15 +89,81 @@ var(--publish-box-border); */
 
 
 html {
-  background-color: #ffffff;
+  background-color: #fafbfc;
+  font-size: 16px;
 }
 body {
-  background-color: #ffffff;
+  background-color: #fafbfc;
   position: relative;
   padding-top: 0;
+  font-family: 'Inter', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem; /* ~17px */
+  line-height: 1.6;
+  color: #22272a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Forcer la largeur des colonnes Bootstrap à 1280px et centrage */
+.inner-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col-12, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .segment {
   position: relative;
+}
+}
+
+/* Harmoniser la largeur du header, du contenu et du footer */
+#segment-header > .container,
+#segment-content > .container,
+#segment-footer > .container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 99999px) {
+  .container {
+    max-width: 1280px; /* unified measure for all screens, même >1600px */
+  }
+    max-width: 1280px;
+  }
+}
+.site-container { /* conteneur parent commun pour garantir alignement */
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 99999px) {
+  .site-container { max-width: 1280px; }
+    max-width: 1280px; /* unified measure for all screens */
+
+/* Assurer que la barre de navigation (menu) utilise la même largeur */
+#main-navbar, .navbar-inverse, #main-navbar > .container {
+  width: 100%;
+}
+
+/* Forcer le menu principal à se placer dans .site-container si présent */
+.navbar-inverse > .container { max-width: none; }
+
+/* S'assurer que les sections utilisent le conteneur commun */
+#segment-header > .container > .site-container,
+#segment-content > .container > .site-container,
+#segment-footer > .container > .site-container {
+  width: 100%;
 }
 .segment > .container {
   background-color: #ffffff;
@@ -117,6 +183,38 @@ body {
   background-color: var(--footer-container-bg-color);
   color: var(--footer-text-color);
 }
+/* Footer visual improvements */
+#segment-footer {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+#segment-footer a {
+  color: var(--footer-hyperlink-text-color);
+}
+#segment-footer .inner-wrapper p {
+  margin: 0.6rem 0;
+  color: var(--footer-text-color);
+}
+/* nav strip at top of footer — subtle and compact */
+#segment-footer .footer-nav-strip {
+  background-color: rgba(0,0,0,0.03);
+  padding: 6px 0;
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+#segment-footer .footer-nav-strip table { width: 100%; }
+#segment-footer .footer-nav-strip td { padding: 4px 6px; font-size: 0.95rem; }
+
+/* compact inner wrapper */
+#segment-footer .inner-wrapper p { margin: 0.45rem 0; font-size: 0.95rem; }
+
+/* Ensure paragraphs in content have comfortable spacing */
+.inner-wrapper p, .inner-wrapper li { font-size: 0.92rem; line-height: 1.6; }
+
+/* bottom strip (post-footer) remains hidden by default; show only when necessary */
+#segment-post-footer { display: none; }
+
+/* Ensure links are spaced and readable */
+#segment-footer .inner-wrapper a { margin-right: 0.6rem; }
 .navbar-inverse {
   background-color: var(--navbar-bg-color);
 }
@@ -180,6 +278,180 @@ body {
   max-width: 100%;
 }
 
+/* IG header: logo + title on one line */
+.ig-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+.ig-header-row, .ig-header-row * {
+  max-width: 1280px;
+}
+.ig-logo {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  display: block;
+}
+
+/* New header layout: top row with logo left, centered main title, spacer right */
+.ig-header-top {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ig-main-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0b2545;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+.ig-logo-spacer {
+  display: inline-block;
+  width: 220px; /* reserve space equivalent to logo width to keep title centered */
+}
+
+/* Second row: IG title centered */
+.ig-header-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+}
+.ig-ig-title {
+  font-size: 0.95rem;
+  color: #3b3b3b;
+}
+.ig-title-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ig-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0b2545; /* stronger, dark navy for contrast */
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+.ig-subtitle {
+  font-size: 0.95rem;
+  color: #55606a;
+  margin-top: 2px;
+}
+
+@media (max-width: 720px) {
+  .ig-header-row {
+    display: block;
+    padding: 8px 0;
+  }
+  .ig-title {
+    font-size: 1rem;
+  }
+  .ig-main-title { position: static; transform: none; text-align: left; margin-left: 8px; }
+  .ig-logo-spacer { display:none; }
+}
+
+/* Layout: limit measure for better readability */
+.container {
+  max-width: 1280px; /* unified measure */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Larger displays: expand container but keep readable measure */
+@media (min-width: 99999px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  /* Two-column layout: content + slim TOC */
+  .inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* Ensure inner-wrapper doesn't exceed the global container width */
+  .inner-wrapper, .inner-wrapper > .content-column, .inner-wrapper > .content-column > .col-12 {
+    max-width: 1280px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* Right-hand TOC: reduced width, softened visual weight, sticky */
+  ul.markdown-toc, div.markdown-toc {
+    width: 280px !important;
+    position: sticky;
+    top: 110px;
+    background: var(--toc-box-bg-color);
+    border: var(--toc-box-border);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: none;
+    max-height: calc(100vh - 140px);
+    overflow: auto;
+  }
+
+  .inner-wrapper > .content-column { max-width: 100%; }
+}
+
+/* On very large displays, slightly reduce font scale and measure for better harmony */
+@media (min-width: 1600px) {
+  body {
+    font-size: 1.0rem; /* reduce to ~16px on very large screens */
+    line-height: 1.6;
+  }
+
+  .ig-title {
+    font-size: 1.0rem; /* smaller, tighter title */
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.125rem; }
+
+  .container {
+    max-width: 1000px; /* tighter measure for readability on very wide screens */
+  }
+
+  .inner-wrapper {
+    gap: 32px;
+  }
+
+  /* Tweak logo and header spacing for very large displays */
+  .ig-logo { height: 44px; max-width: 200px; }
+  .ig-header-row { padding: 0.25rem 0; }
+  .ig-subtitle { font-size: 0.88rem; }
+
+  /* Slightly soften publish-box tone */
+  #publish-box { background-color: #fffaf0; border-color: #efe0b0; }
+}
+
+/* Make the publish box less aggressive and clearer */
+#publish-box {
+  background-color: #fff7e6; /* softer than bright yellow */
+  border: 1px solid #f0dca8;
+  color: #333333;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* Ensure small gap between heading and following paragraph */
+h1 + p, h2 + p, h3 + p {
+  margin-top: 0.45rem;
+}
+
 #fcp-nav {
   line-height: 50px;
   float: right;
@@ -215,11 +487,41 @@ body {
 }
 
 #ig-status {
-  line-height: 20px;
-  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 12px;
   color: var(--ig-status-text-color);
-  text-align: center;
-  height: 50px;
+  /* Keep overall height to match other header elements */
+  min-height: 56px;
+}
+
+#ig-status .ig-status-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#ig-status .ig-status-logo-img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+#ig-status .ig-status-text {
+  flex: 1 1 auto;
+  text-align: center; /* keep the two text spans centered */
+  line-height: 1.1;
+}
+
+#ig-status .ig-status-title {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+#ig-status .ig-status-sub {
+  display: inline-block;
+  margin-top: 2px;
 }
 
 #stripe {
@@ -232,11 +534,6 @@ body {
 }
 #notes a {
   color: #555555;
-}
-#publish-box {
-  background-color: var(--publish-box-bg-color);
-  border: var(--publish-box-border);
-  padding: 5px;
 }
 
 .dragon {
@@ -477,6 +774,13 @@ a:focus {
   margin-bottom: 0;
   background-color: var(--breadcrumb-bg-color);;
 }
+.breadcrumb {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .breadcrumb a {
   color: var(--breadcrumb-text-color);
 }
@@ -568,7 +872,7 @@ ul.markdown-toc
 {
   margin: 4px;
   padding: 4px;
-  float: right;
+  /* float: right;  supprimé pour que le menu ne soit plus flottant */
   z-index: 10;
   width: 30%;
   background-color:  var(--toc-box-bg-color);
@@ -601,6 +905,15 @@ div.markdown-toc
   border: var(--toc-box-border);
 }
 
+/* Harmonize publish-box with markdown TOC styling for a cohesive look */
+div.markdown-toc, #publish-box {
+  background-color: var(--toc-box-bg-color);
+  border: var(--toc-box-border);
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
 div.markdown-toc p
 {
   font-size: 10px;
@@ -618,8 +931,56 @@ div.markdown-toc p.link
 
 /* Fix to avoid truncating letter descenders in headings */
 h1, h2, h3, h4, h5, h6, .title {
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 1em 0 0.45em 0;
   overflow: visible;
-  margin: 1em 0 0.4em 0;
+}
+
+/* Ensure pseudo-numbering is unobtrusive */
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+  font-size: 0.95em;
+  color: #9a9a9a;
+  margin-right: 0.4rem;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+h1 {
+  font-size: 1.75rem; /* slightly smaller for balance */
+  font-weight: 700;
+  color: #2d1152;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 0.25em;
+}
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3c207c;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 0.12em;
+}
+h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4e2a8e;
+}
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #5c3ca0;
+}
+h5 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #6a4cb2;
+}
+h6 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #7a5cc4;
 }
 
 /* Common content for section numbering */

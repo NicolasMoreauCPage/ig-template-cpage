@@ -59,9 +59,15 @@
 {% assign status = site.data.fhir.ig.status %}
 {% endif %}
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">{{site.data.fhir.ig.title | escape_once}}</span>
+          <div class="ig-status-logo">
+            <a href="{{site.data.fhir.path}}index.html" aria-label="Accueil CPage">
+              <img src="assets/images/logo-cpage.svg" alt="CPage logo" class="ig-status-logo-img"/>
+            </a>
+          </div>
+          <div class="ig-status-text">
+            <span class="ig-status-title">{{site.data.fhir.ig.title | escape_once}}</span>
             <br/>
-            <span style="display:inline-block;">{{site.data.fhir.ig.version}} - {{status}}
+            <span class="ig-status-sub">{{site.data.fhir.ig.version}} - {{status}}
 {% assign igId = site.data.fhir.ig.id | prepend: "ImplementationGuide/" %}
 {% for jurisdiction in site.data.resources[igId].jurisdictions %}
 {% if jurisdiction.flag %}
@@ -73,7 +79,7 @@
 {% endif %}
 {% endfor %}
             </span>
-          </p>
+          </div>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
