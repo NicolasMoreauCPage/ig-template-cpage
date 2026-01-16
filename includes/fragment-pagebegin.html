@@ -62,11 +62,6 @@
 {% assign status = site.data.fhir.ig.status %}
 {% endif %}
         <div id="ig-status">
-          <div class="ig-status-logo">
-            <a href="{{site.data.fhir.path}}index.html" aria-label="Accueil CPage">
-              <img src="assets/images/logo-cpage.svg" alt="CPage logo" class="ig-status-logo-img"/>
-            </a>
-          </div>
           <div class="ig-status-text">
             <span class="ig-status-title">{{site.data.fhir.ig.title | escape_once}}</span>
             <br/>
