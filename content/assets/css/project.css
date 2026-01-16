@@ -297,19 +297,23 @@ body {
 
 /* New header layout: top row with logo left, centered main title, spacer right */
 .ig-header-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
+  display: block;
   width: 100%;
 }
 .ig-main-title {
-  flex: 1 1 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0b2545;
+  padding: 6px 12px;
+  white-space: nowrap;
 }
 .ig-logo-spacer {
+  display: inline-block;
   width: 220px; /* reserve space equivalent to logo width to keep title centered */
 }
 
@@ -343,13 +347,14 @@ body {
 
 @media (max-width: 720px) {
   .ig-header-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
+    display: block;
+    padding: 8px 0;
   }
   .ig-title {
     font-size: 1rem;
   }
+  .ig-main-title { position: static; transform: none; text-align: left; margin-left: 8px; }
+  .ig-logo-spacer { display:none; }
 }
 
 /* Layout: limit measure for better readability */
